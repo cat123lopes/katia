@@ -1,0 +1,168 @@
+/* FONT - ROBOTO */
+
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url(fonts/Roboto/Roboto-Black.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(fonts/Roboto/Roboto-Light.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*******************************/
+
+
+/*******************************/
+
+
+/*
+html,
+body {
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .no-padding-xs {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+*/
+
+
+/* SECTION */
+
+#home #fullpage .section {
+    padding-top: 20px;
+}
+
+#home #fullpage #section-katia .section-katia-bckg {
+    background-color: #56A7B9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.container {
+    padding-left: 0px;
+}
+#home #fullpage #section-katia .section-katia-content img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#home #fullpage #section-katia .section-katia-content .section-desc {
+    margin-bottom: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10%;
+    text-align: left;
+    z-index: 1000;
+}
+.text {
+   margin: 176px 0 176px 50px
+}
+
+
+#home #fullpage #section-katia .section-desc h1 {
+    font-family: 'Roboto-Black';
+    font-size: 45px;
+    line-height: 47px;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+#home #fullpage #section-katia .section-desc h2 {
+    font-family: 'Roboto-Light';
+    font-size: 27px;
+    color: black;
+    text-transform: lowercase;
+    margin-top: 0;
+}
+
+
+/* *{
+  margin:0;
+  padding:0;
+}
+.container{
+  margin:0 auto;
+  width: 400px;
+  margin-top:20px;
+}
+/*  slider  */
+
+.fadeslider {
+    width: 700px;
+    height: 450px;
+    /*float: left;*/
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.fadeslider .slide {
+ position: absolute;
+    top: 0;
+    opacity: 0;
+/*    display: none;*/
+    margin-top: 50px;
+      transition: opacity 300ms;
+}
+
+.fadeslider .slide.active {
+    opacity: 1;
+/*    display: block;*/
+
+}
+
+.slidelist {
+    position: absolute;
+    bottom: 60px;
+    left: 735px;
+    transition: 300ms;
+    color: black;
+    cursor: pointer;
+    font-family: 'Roboto-Light';
+    text-decoration: none;
+}
+
+
+/*.slidelist div {
+    width: 7.5px;
+    height: 7.5px;
+    background: #fff;
+    float: left;
+    margin-right: 10px;
+    transition: 300ms;
+    border: 1.25px solid #fff;
+}
+
+.slidelist div.active {
+    width: 7.5px;
+    height: 7.5px;
+    border: 1.25px solid #fff;
+}*/
+
+.slidelist div.active {
+    color: #505050;
+}
+
+
