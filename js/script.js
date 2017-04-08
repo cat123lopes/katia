@@ -17,15 +17,14 @@ $(function () {
     }
 
     function sliderTo(index) {
-//clearInterval(timer);
+
         var l = $(".fadeslider .slide").length;
-//        $(".fadeslider .slide").fadeOut(2000);
-//        $(".fadeslider .slide:nth-child(" + index.1 + ")").fadeIn(2000);
+
         $(".fadeslider .slide").removeClass('active');
         i = index;
-//        $(".fadeslider .slide:nth-child(" + i + ")").fadeIn(2000);
+
         $(".fadeslider .slide:nth-child(" + i + ")").addClass('active');
-// timer = setInterval(slider, 500)
+
     }
 
     function sliderback() {
@@ -48,19 +47,25 @@ $(function () {
     $(".slideback").click(function () {
         sliderback();
     });
-// var timer = setInterval(slider, 500);
+
     $('.slideback,.slidenext').hover(function (ev) {
         clearInterval(timer);
     }, function (ev) {
         timer = setInterval(slider, 500);
     });
     $('#trigger-image-1').click(function () {
+        $(".slidelist h3").removeClass("active");
+        $(this).addClass("active");
         sliderTo(1);
     })
     $('#trigger-image-2').click(function () {
+        $(".slidelist h3").removeClass("active");
+        $(this).addClass("active");
         sliderTo(2);
     })
     $('#trigger-image-3').click(function () {
+        $(".slidelist h3").removeClass("active");
+        $(this).addClass("active");
         sliderTo(3)
     })
 })

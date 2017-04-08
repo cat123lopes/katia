@@ -28,25 +28,18 @@
 /*******************************/
 
 
-/*
-html,
-body {
-  height: 100%;
-}
-@media (max-width: 767px) {
-  .no-padding-xs {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-*/
-
-
 /* SECTION */
 
 #home #fullpage .section {
     padding-top: 20px;
+    
 }
+
+#home #fullpage {
+    overflow-x: hidden;
+    
+}
+
 
 #home #fullpage #section-katia .section-katia-bckg {
     background-color: #56A7B9;
@@ -56,15 +49,35 @@ body {
     width: 50%;
     height: 100%;
     opacity: 0.5;
+    
+    
+    animation-name: moveOne;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes moveOne {
+    from {
+        left: 100%;
+/*        opacity: 0;*/
+    }
+    to {
+        left: 0px;
+/*        opacity: 1;*/
+    }
 }
 
 .container {
     padding-left: 0px;
 }
+
 #home #fullpage #section-katia .section-katia-content img {
     margin: 0 auto;
     max-width: 100%;
+  
+    
 }
+
 
 #home #fullpage #section-katia .section-katia-content .section-desc {
     margin-bottom: 0;
@@ -75,10 +88,11 @@ body {
     text-align: left;
     z-index: 1000;
 }
-.text {
-   margin: 176px 0 176px 50px
-}
 
+.text {
+    margin: 176px 0 176px 50px;
+    
+}
 
 #home #fullpage #section-katia .section-desc h1 {
     font-family: 'Roboto-Black';
@@ -86,7 +100,21 @@ body {
     line-height: 47px;
     color: black;
     text-transform: uppercase;
-    margin-bottom: 0px;
+    position: relative;
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes flash {
+    from {
+        bottom: 70px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
 }
 
 #home #fullpage #section-katia .section-desc h2 {
@@ -95,43 +123,59 @@ body {
     color: black;
     text-transform: lowercase;
     margin-top: 0;
+    
+    animation-name: moveH2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;   
+}
+
+@-webkit-keyframes moveH2 {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 
 
-/* *{
-  margin:0;
-  padding:0;
-}
-.container{
-  margin:0 auto;
-  width: 400px;
-  margin-top:20px;
-}
 /*  slider  */
 
 .fadeslider {
     width: 700px;
     height: 450px;
-    /*float: left;*/
     text-align: center;
     overflow: hidden;
-    
 }
 
 .fadeslider .slide {
- position: absolute;
+    position: absolute;
     top: 0;
     opacity: 0;
-/*    display: none;*/
     margin-top: 50px;
-      transition: opacity 300ms;
+    transition: opacity 300ms;
 }
 
 .fadeslider .slide.active {
     opacity: 1;
-/*    display: block;*/
-
+    animation-name: moveimg;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; 
 }
+
+@-webkit-keyframes moveimg {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
 
 .slidelist {
     position: absolute;
@@ -144,25 +188,7 @@ body {
     text-decoration: none;
 }
 
-
-/*.slidelist div {
-    width: 7.5px;
-    height: 7.5px;
-    background: #fff;
-    float: left;
-    margin-right: 10px;
-    transition: 300ms;
-    border: 1.25px solid #fff;
+.slidelist h3.active {
+    color: #56A7B9;
+    font-family: 'Roboto-Regular';
 }
-
-.slidelist div.active {
-    width: 7.5px;
-    height: 7.5px;
-    border: 1.25px solid #fff;
-}*/
-
-.slidelist div.active {
-    color: #505050;
-}
-
-
